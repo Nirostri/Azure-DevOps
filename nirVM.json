@@ -1,0 +1,67 @@
+{
+    "id": "/subscriptions/a8108c2b-496c-424d-8347-ecc8afb6384c/resourceGroups/NIR_RESOURCE_GROUP/providers/Microsoft.Compute/virtualMachines/nirVM",
+    "name": "nirVM",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "westus",
+    "tags": {},
+    "hardwareProfile": {
+        "vmSize": "Standard_DS1_v2"
+    },
+    "storageProfile": {
+        "imageReference": {
+            "publisher": "Canonical",
+            "offer": "UbuntuServer",
+            "sku": "18.04-LTS",
+            "version": "latest",
+            "exactVersion": "18.04.202110120"
+        },
+        "osDisk": {
+            "osType": "Linux",
+            "name": "nirVM_disk1_86de8230bcb44c16926ea1d833461868",
+            "caching": "ReadWrite",
+            "createOption": "FromImage",
+            "diskSizeGB": 30,
+            "managedDisk": {
+                "id": "/subscriptions/a8108c2b-496c-424d-8347-ecc8afb6384c/resourceGroups/NIR_RESOURCE_GROUP/providers/Microsoft.Compute/disks/nirVM_disk1_86de8230bcb44c16926ea1d833461868",
+                "storageAccountType": "Premium_LRS"
+            }
+        },
+        "dataDisks": []
+    },
+    "osProfile": {
+        "computerName": "nirVM",
+        "adminUsername": "nirostri",
+        "linuxConfiguration": {
+            "disablePasswordAuthentication": true,
+            "ssh": {
+                "publicKeys": [
+                    {
+                        "path": "/home/nirostri/.ssh/authorized_keys",
+                        "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+99m6Zjt49zo3FWUJJtwghRdBiiGqmxPAG47j+VJ3fu20xSn7o8q200aQg9oBDRD764sTgzOFdMYibAibx4lsxJ6Z7i74eeXqLQktHNobWeo1DEHr69/RjTEbdQsi3CtcrSRE9v6wGmekA9HeSIZnb4amdYJXiQwxX287nQ6yr/EvCdwAzWGbPGe5gWljOE7EkqKawu2R9HVzXjoRUIeW7VjZOLvRqWAmVkTc12m9icfV2tl8xOJLvyqbXwo1XvSk2Wgbt3GpngXauIZC0xHKs1KxfQJ+rufZlAqLeAqO9282mkUfX7zYjL2OnggnsMD20LMxZBU92eqZRYiPpufZ"
+                    }
+                ]
+            },
+            "provisionVMAgent": true,
+            "patchSettings": {
+                "patchMode": "ImageDefault"
+            }
+        },
+        "secrets": [],
+        "allowExtensionOperations": true,
+        "requireGuestProvisionSignal": true
+    },
+    "networkProfile": {
+        "networkInterfaces": [
+            {
+                "id": "/subscriptions/a8108c2b-496c-424d-8347-ecc8afb6384c/resourceGroups/Nir_Resource_Group/providers/Microsoft.Network/networkInterfaces/nirVMVMNic"
+            }
+        ]
+    },
+    "diagnosticsProfile": {
+        "bootDiagnostics": {
+            "enabled": true
+        }
+    },
+    "provisioningState": "Succeeded",
+    "vmId": "b3411f7d-f44e-4d8b-84ef-f3a3a6a15051"
+}
